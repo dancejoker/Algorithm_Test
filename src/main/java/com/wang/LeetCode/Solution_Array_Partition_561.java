@@ -11,9 +11,12 @@ import java.util.Collections;
  * Created by ddp on 2018/2/17.
  */
 public class Solution_Array_Partition_561 {
-    public int arrayPairSum(int[] nums) {
+    public int arrayPairSum(Integer[] nums) {
         int sum = 0;
         Arrays.sort(nums);
+        // 逆序，sort函数不能用基本类型，sort()的第一个参数是
+        //泛型，泛型遇见基本类型，基本类型不会出现自动转换为包装类
+//        Arrays.sort(nums,Collections.reverseOrder());
         for(int i=0; i<nums.length; i+=2)
             sum += nums[i];
 
@@ -21,7 +24,7 @@ public class Solution_Array_Partition_561 {
     }
 
     public static void main(String[] args) {
-        int[] arrays = {1,4,3,2};
+        Integer[] arrays = {1,4,3,2};
         System.out.println(new Solution_Array_Partition_561().arrayPairSum(arrays));
     }
 }
