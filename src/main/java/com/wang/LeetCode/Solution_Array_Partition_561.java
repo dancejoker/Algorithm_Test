@@ -13,7 +13,6 @@ import java.util.Collections;
 public class Solution_Array_Partition_561 {
     public int arrayPairSum(int[] nums) {
         int sum = 0;
-        ArrayList<Integer> integers = new ArrayList<>();
         for(int i=0; i<nums.length; i+=2)
             sum += nums[i];
 
