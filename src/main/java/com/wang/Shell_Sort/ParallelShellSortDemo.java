@@ -1,4 +1,4 @@
-package com.wang.Hash_Sort;
+package com.wang.Shell_Sort;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -7,7 +7,7 @@ import java.util.concurrent.Executors;
 /**
  * Created by ddp on 2017/9/17.
  */
-public class ParallelHashSortDemo {
+public class ParallelShellSortDemo {
     static ExecutorService pool = Executors.newCachedThreadPool();
     public static class ShellSortTask implements Runnable{
         int i = 0;

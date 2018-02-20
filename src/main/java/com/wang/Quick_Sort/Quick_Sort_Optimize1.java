@@ -22,7 +22,7 @@ public class Quick_Sort_Optimize1 {
         }
         return low;
     }
-
+    //三数去中
     public static void ChoosePivotkey(int[] arr,int low,int high) {
             int mid = low + (int)(high - low)/2;
         if(arr[low] > arr[high])//保证左端较小

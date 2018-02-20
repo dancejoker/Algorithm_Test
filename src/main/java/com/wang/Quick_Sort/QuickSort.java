@@ -11,25 +11,25 @@ public class QuickSort {
             new Exception();
         }
         int pivotkey;
-//        pivotkey = arr[low];//选取第一个记录作枢轴记录
-//        while(low < high){
-//            while(low < high && arr[high] >= pivotkey)  //如果大于枢轴值，则下标减一，否则，跳出循环
-//                --high;
-//            Swap(arr,low,high);
-//            while(low < high && arr[low] < pivotkey)    //如果小于枢轴值，则下标加一，否则，跳出循环。
-//                ++low;
-//            Swap(arr,low,high);
-//        }
-        pivotkey = arr[high];
+        pivotkey = arr[low];//选取第一个记录作枢轴记录
         while(low < high){
-            while(low < high && arr[low] <= pivotkey)
-                ++ low;
+            while(low < high && arr[high] >= pivotkey)  //如果大于枢轴值，则下标减一，否则，跳出循环
+                --high;
             Swap(arr,low,high);
-            while(low < high && arr[high] > pivotkey)
-                -- high;
+            while(low < high && arr[low] < pivotkey)    //如果小于枢轴值，则下标加一，否则，跳出循环。
+                ++low;
             Swap(arr,low,high);
         }
-        return high;
+//        pivotkey = arr[high];
+//        while(low < high){
+//            while(low < high && arr[low] <= pivotkey)
+//                ++ low;
+//            Swap(arr,low,high);
+//            while(low < high && arr[high] > pivotkey)
+//                -- high;
+//            Swap(arr,low,high);
+//        }
+        return low  ;
     }
     public static void Swap(int[] arr,int low,int high){
         int temp = arr[low];

@@ -1,9 +1,9 @@
-package com.wang.Hash_Sort;
+package com.wang.Shell_Sort;
 
 /**
  * Created by ddp on 2017/9/17.
  */
-public class HashSortDemo {
+public class ShellSortDemo {
     public static void shellSort(int[] arr){
         int h = 1;
         while(h <= arr.length / 3){
