@@ -20,15 +20,6 @@ public class QuickSort {
                 ++low;
             Swap(arr,low,high);
         }
-//        pivotkey = arr[high];
-//        while(low < high){
-//            while(low < high && arr[low] <= pivotkey)
-//                ++ low;
-//            Swap(arr,low,high);
-//            while(low < high && arr[high] > pivotkey)
-//                -- high;
-//            Swap(arr,low,high);
-//        }
         return low  ;
     }
     public static void Swap(int[] arr,int low,int high){
