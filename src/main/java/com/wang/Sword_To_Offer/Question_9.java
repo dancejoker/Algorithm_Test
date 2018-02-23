@@ -7,19 +7,19 @@ package com.wang.Sword_To_Offer;
  */
 public class Question_9 {
     public long fibonacci(int n) {
-        long result=0;
-        long preOne=1;
-        long preTwo=1;
-        if(n==0) {
+        long result = 0;
+        long preOne = 1;
+        long preTwo = 1;
+        if(n == 0) {
             return preOne;
         }
-        if(n==1) {
+        if(n == 1) {
             return preTwo;
         }
-        for(int i=2; i <= n; i++) {
-            result=preOne+preTwo;
-            preOne=preTwo;
-            preTwo=result;
+        for(int i = 2; i <= n; i++) {
+            result = preOne+preTwo;
+            preOne = preTwo;
+            preTwo = result;
         }
         return result;
     }

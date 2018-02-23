@@ -25,7 +25,7 @@ public class Question_3 {
     }
 
     public static void main(String[] args) {
-        int[][] testarray=new int[4][4];
+        int[][] testarray = new int[4][4];
         testarray[0][0]=1;
         testarray[0][1]=2;
         testarray[0][2]=8;

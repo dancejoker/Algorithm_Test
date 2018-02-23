@@ -11,7 +11,7 @@ public class Question_11 {
     }
     public double power(double base,int exponent) throws Exception {
         double result = 0.0;
-        if(equal(base,0.0)&&exponent<0) {
+        if(equal(base,0.0) && exponent < 0) {
             throw new Exception("0的负数次幂没有意义");
         }
         if(exponent < 0) {
@@ -50,7 +50,7 @@ public class Question_11 {
         return result;
     }
     private boolean equal(double num1, double num2) {
-        if((num1 - num2> -0.0000001)&&num1 - num2 < 0.0000001) {
+        if((num1 - num2 > -0.0000001) && num1 - num2 < 0.0000001) {
             return true;
         } else {
             return false;

@@ -7,15 +7,15 @@ package com.wang.Sword_To_Offer;
  */
 public class Question_4 {
     public static void main(String args[]) {
-        String s="We are happy.";
+        String s = "We are happy.";
         System.out.println(replaceBlank(s));
     }
     public static String replaceBlank(String input) {
-        if(input==null)
+        if(input == null)
             return null;
-        StringBuffer outputBuffer=new StringBuffer();
-        for(int i=0; i<input.length(); i++) {
-            if(input.charAt(i)==' ') {
+        StringBuffer outputBuffer = new StringBuffer();
+        for(int i=0; i < input.length(); i++) {
+            if(input.charAt(i) == ' ') {
                 outputBuffer.append("%");
                 outputBuffer.append("2");
                 outputBuffer.append("0");

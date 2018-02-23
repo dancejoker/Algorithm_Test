@@ -13,22 +13,22 @@ public class Question_5 {
         ListNode next;
     }
     public static void main (String args[]) {
-        ListNode node1=new ListNode();
-        ListNode node2=new ListNode();
-        ListNode node3=new ListNode();
-        node1.data=1;
-        node2.data=2;
-        node3.data=3;
-        node1.next=node2;
-        node2.next=node3;
-        Question_5 test=new Question_5();
+        ListNode node1 = new ListNode();
+        ListNode node2 = new ListNode();
+        ListNode node3 = new ListNode();
+        node1.data = 1;
+        node2.data = 2;
+        node3.data = 3;
+        node1.next = node2;
+        node2.next = node3;
+        Question_5 test = new Question_5();
         test.printListReverse(node1);
     }
     public static void printListReverse(ListNode headNode) {
         Stack<ListNode> stack=new Stack<ListNode>();
-        while(headNode!=null) {
+        while(headNode != null) {
             stack.push(headNode);
-            headNode=headNode.next;
+            headNode = headNode.next;
         }
         while(!stack.isEmpty()) {
             System.out.println(stack.pop().data);

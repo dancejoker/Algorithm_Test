@@ -9,8 +9,8 @@ import java.util.Stack;
  * Created by ddp on 2018/2/21.
  */
 public class Question_7<T> {
-    private Stack<T> stack1=new Stack<T>();
-    private Stack<T> stack2=new Stack<T>();
+    private Stack<T> stack1 = new Stack<T>();
+    private Stack<T> stack2 = new Stack<T>();
     public void appendTail(T t) {
         stack1.push(t);
     }
@@ -27,7 +27,7 @@ public class Question_7<T> {
         return stack2.pop();
     }
     public static void main(String args[]) throws Exception {
-        Question_7<String> p7=new Question_7<>();
+        Question_7<String> p7 = new Question_7<>();
         p7.appendTail("1");
         p7.appendTail("2");
         p7.appendTail("3");
