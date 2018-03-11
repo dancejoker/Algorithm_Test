@@ -34,7 +34,7 @@ public class Question_15 {
         }
         ListNode resultNode = null;
         ListNode headListNode = head;
-        for(int i = 0; i<k; ++i) {
+        for(int i = 0; i < k - 1; ++i) {
             if(headListNode.nextNode != null) {
                 headListNode = headListNode.nextNode;
             } else {
@@ -42,7 +42,7 @@ public class Question_15 {
             }
         }
         resultNode = head;
-        while(headListNode != null) {
+        while(headListNode.nextNode != null) {
             resultNode = resultNode.nextNode;
             headListNode = headListNode.nextNode;
         }

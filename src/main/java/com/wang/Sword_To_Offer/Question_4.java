@@ -23,6 +23,7 @@ public class Question_4 {
                 outputBuffer.append(String.valueOf(input.charAt(i)));
             }
         }
+        
         return new String(outputBuffer);
     }
 }

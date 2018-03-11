@@ -19,7 +19,7 @@ public class Question_14 {
             return ;
         int start=0;
         int end=array.length - 1;
-        while(start<end) {
+        while(start < end) {
             while(start < end && !isEven(array[start])) {
                 start++;
             }

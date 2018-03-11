@@ -80,7 +80,7 @@ public class HeapSort {
      */
     public void BuildMaxHeap(Heap heap) {
         int heapsize = heap.getHeapSize();
-        for (int i = (heapsize - 1) / 2; i>= 0; i--) {
+        for (int i = (heapsize - 1) / 2; i >= 0; i--) {
 //            RecusiveHeapAdjust(heap, i);
             NoRecusiveHeapAdjust(heap, i);
         }
@@ -108,5 +108,6 @@ public class HeapSort {
         HeapSort heapSort = new HeapSort();
         heapSort.heapSort(heap);
         System.out.println(heap.getList().toString());
+        System.out.println(heap.getHeapSize());
     }
 }

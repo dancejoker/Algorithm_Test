@@ -24,7 +24,7 @@ public class Question_3 {
         return false;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int[][] testarray = new int[4][4];
         testarray[0][0]=1;
         testarray[0][1]=2;
@@ -43,5 +43,6 @@ public class Question_3 {
         testarray[3][2]=11;
         testarray[3][3]=15;
         System.out.println(find(testarray, 1));
+        Thread.sleep(200000000);
     }
 }

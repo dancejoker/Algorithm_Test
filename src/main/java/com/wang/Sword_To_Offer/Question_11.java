@@ -31,7 +31,7 @@ public class Question_11 {
         }
         double result = 1.0;
         for(int i=1; i <= exponent; i++) {
-            result = result*base;
+            result = result * base;
         }
         return result;
     }
