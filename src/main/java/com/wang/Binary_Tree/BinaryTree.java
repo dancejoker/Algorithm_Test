@@ -1,8 +1,13 @@
 package com.wang.Binary_Tree;
 
+import com.sun.org.apache.regexp.internal.RE;
+
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Stack;
 
 /**
+ * 二叉排序树
  * Created by ddp on 2018/2/24.
  */
 public class BinaryTree {
@@ -180,6 +185,93 @@ public class BinaryTree {
         }
         return current.getValue();
     }
+
+
+    /**
+     * 层次遍历
+     * @param root
+     */
+    public static void levelRead(Node root) {
+        if(root == null) return;
+        Queue<Node> queue = new LinkedList<>() ;
+        queue.add(root);
+        while(queue.size() != 0) {
+            int len = queue.size();
+            for(int i=0;i <len; i++) {
+                Node temp = queue.poll();
+                System.out.print(temp.getValue()+" ");
+                if(temp.getLeftChild() != null)  queue.add(temp.getLeftChild());
+                if(temp.getRightChild() != null) queue.add(temp.getRightChild());
+            }
+        }
+    }
+
+
+    /**
+     * 二叉树深度
+     */
+     public static int getMaxDepth(Node root){
+         if(root == null)
+             return  0;
+         else {
+             int left = getMaxDepth(root.getLeftChild());
+             int right = getMaxDepth(root.getRightChild());
+             return 1 + Math.max(left,right);
+         }
+     }
+
+    /**
+     * 二叉树宽度
+     */
+    public static int getMaxWidth(Node root){
+        if(root == null)
+            return 0;
+        Queue<Node> queue = new LinkedList<>();
+        int maxWidth = 1;
+        queue.add(root);
+        while(true){
+            int len = queue.size(); //当前层的节点个数
+            if(len == 0)
+                break;
+            while(len > 0){ // 如果当前层，还有节点
+                Node t = queue.poll();
+                len--;
+                if (t.getLeftChild() != null)
+                    queue.add(t.getLeftChild());
+                if (t.getRightChild() != null)
+                    queue.add(t.getRightChild());
+            }
+            maxWidth = Math.max(maxWidth, queue.size());
+        }
+        return maxWidth;
+    }
+
+    /**
+     * 获取叶子节点的个数
+     */
+    public static int getNumOfLeaf(Node root){
+        if(root == null)
+            return 0;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        int count = 0;
+        while(queue.size() != 0){
+            int size = queue.size();
+            for(int i = 0;i < size;++i){
+                Node node = queue.poll();
+                if(node.getRightChild() == null && node.getLeftChild() == null){
+                    count ++;
+                }else {
+                    if(node.getLeftChild() != null)
+                        queue.add(node.getLeftChild());
+                    if(node.getRightChild() != null)
+                        queue.add(node.getRightChild());
+                }
+            }
+        }
+        return count;
+    }
+
 
     /**
      *  删除节点
